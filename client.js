@@ -9,6 +9,14 @@ const connect = function () {
   });
   
   conn.setEncoding("utf8");
+  console.log("hello Rajini welcome to the game!");
+
+  conn.on('connect', () => {
+    console.log('Hi, RAJINI');
+    conn.write('Name: RAS');
+  })
+
+  // interpret incoming data as text
 
   return conn;
 };
