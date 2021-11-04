@@ -14,6 +14,27 @@ const connect = function () {
   conn.on('connect', () => {
     console.log('Hi, RAJINI');
     conn.write('Name: RAS');
+    //conn.write('Move: up'); 
+    // conn.write('Move: left');
+    // conn.write('Move: down');
+    // conn.write('Move: right');
+    //setTimeout(() => {conn.write('Move: up');}, 500);   
+    //setTimeout(() => {conn.write('Move: left');}, 500);   
+    //setTimeout(() => {conn.write('Move: down');}, 500);   
+    //setTimeout(() => {conn.write('Move: right');}, 500);  
+    
+    setInterval(() => {conn.write('Move: up');}, 500); 
+    setInterval(() => {conn.write('Move: left');}, 500); 
+    setInterval(() => {conn.write('Move: down');}, 500); 
+    setInterval(() => {conn.write('Move: right');}, 500); 
+
+
+
+ 
+
+
+    
+
   })
 
   // interpret incoming data as text
