@@ -13,7 +13,7 @@ const connect = function () {
 
   conn.on('connect', () => {
     //console.log('Hi, RAJINI');
-    //conn.write('Name: RAS');
+    conn.write('Name: AS');
     // conn.write('Move: up'); 
     // conn.write('Move: left');
     // conn.write('Move: down');
@@ -27,19 +27,11 @@ const connect = function () {
     //setInterval(() => {conn.write('Move: left');}, 500); 
     //setInterval(() => {conn.write('Move: down');}, 500); 
     //setInterval(() => {conn.write('Move: right');}, 500); 
-
-
-
- 
-
-
-    
-
   })
-
   // interpret incoming data as text
 
   return conn;
 };
 
 module.exports = connect;
+

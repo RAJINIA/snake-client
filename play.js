@@ -1,18 +1,25 @@
 const connect = require("./client");
-const setupInput = require('./input');
+const setupInput = require("./input");
 
-//const net = require("net");
+// const obj = {
+//   u: "Move: up",
+//   l: "Move: Left",
+//   d: "Move: Down",
+//   r: "Move: Right"
+// };
 
 // const setupInput = function () {
-//   const stdin = process.stdin;      //stdin object allow us to listen for keyboard input
-//   stdin.setRawMode(true);           //configuration settings D'ONT WORRY
-//   stdin.setEncoding("utf8");        //configuration settings D'ONT WORRY
+//   const stdin = process.stdin;
+//   stdin.setRawMode(true);
+//   stdin.setEncoding("utf8");
 //   stdin.resume();
 //   return stdin;
 // };
-// const conn = connect();
+const conn = connect();
+setupInput(conn);
 // const handleUserInput = function (key) {
 //   //console.log(key);
+  
 //   if (key === '\u0003') {                         // key for control C
 //     process.exit();
 //   } else if (key === 'u'){
@@ -29,9 +36,12 @@ const setupInput = require('./input');
 // setupInput().on('data', (key) => {
 //   handleUserInput(key);
 // });
+//setupInput().on("data", handleUserInput);
 
-console.log("Connecting ...");
-connect();
+// setupInput();
+// console.log("Connecting ...");
+// connect();
+
 
 
 
